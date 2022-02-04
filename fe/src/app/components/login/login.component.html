@@ -1,0 +1,23 @@
+<div class="container" style="width: 500px; margin-top: 100px;">
+  <form (ngSubmit)="login()">
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input" type="text" id="email" name="email" [(ngModel)]="email">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input class="input" type="password" id="password" name="password" [(ngModel)]="password">
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

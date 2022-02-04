@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/neo4j/neo4j-go-driver/v4/neo4j"
 	"github.com/raydeng83/go-neo4j-poc/pkg/users"
@@ -25,6 +26,7 @@ func main() {
 	}
 
 	mux := gin.Default()
+	mux.Use(cors.Default())
 	mux.Any(registrationHandler.Path, registrationHandler.Register)
 	mux.Any(loginHandler.Path, loginHandler.Login)
 
